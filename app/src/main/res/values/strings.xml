@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">FP</string>
+    <string name="btnFirstLab">Лабораторная работа №1</string>
+    <string name="btnSecondLab">Лабораторная работа №2</string>
+    <string name="btnFirstTask">Задание №1</string>
+    <string name="btnSecondTask">Задание №2</string>
+    <string name="tilFirst">Введите первое число</string>
+    <string name="tilSecond">Введите второе число</string>
+    <string name="btnpascalTriangle">Рассчитать</string>
+</resources>
