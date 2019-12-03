@@ -1,31 +1,31 @@
-package com.example.fp;
+package com.example.fp.secondLab;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.widget.Button;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
+import com.example.fp.R;
+import com.example.fp.firstLab.SecondTaskFirstLabActivity;
 
-public class FirstLab extends AppCompatActivity {
+public class SecondLab extends AppCompatActivity {
 
     Button btnFirstTask, btnSecondTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_lab);
-        ButterKnife.bind(this);
+        setContentView(R.layout.activity_second_lab);
+
         btnFirstTask = findViewById(R.id.btnFirstTask);
         btnSecondTask = findViewById(R.id.btnSecondTask);
         btnFirstTask.setOnClickListener(view -> {
-            Intent intent = new Intent(this, FirstTaskActivity.class);
+            Intent intent = new Intent(this, SecondLabFirstTask.class);
             startActivity(intent);
         });
 
         btnSecondTask.setOnClickListener(view -> {
-            Intent intent = new Intent(this, SecondTaskFirstLabActivity.class);
+            Intent intent = new Intent(this, SecondLabSecondTask.class);
             startActivity(intent);
         });
     }

@@ -9,10 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SecondTaskFirstLabActivity">
+        <activity android:name=".secondLab.SecondLabSecondTask">
         </activity>
-        <activity android:name=".FirstLab"/>
-        <activity android:name=".FirstTaskActivity"/>
+        <activity android:name=".secondLab.SecondLabFirstTask">
+        </activity>
+        <activity android:name=".secondLab.SecondLab">
+        </activity>
+        <activity android:name=".firstLab.SecondTaskFirstLabActivity">
+        </activity>
+        <activity android:name=".firstLab.FirstLab"/>
+        <activity android:name=".firstLab.FirstTaskActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

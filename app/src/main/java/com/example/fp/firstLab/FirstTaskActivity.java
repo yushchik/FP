@@ -1,10 +1,12 @@
-package com.example.fp;
+package com.example.fp.firstLab;
 
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.fp.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
