@@ -2,7 +2,6 @@ package com.example.fp.fourthLaba;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -10,12 +9,13 @@ import android.widget.TextView;
 import com.example.fp.R;
 
 import java.util.ArrayList;
+import java.util.function.Function;
 
 public class FourthLaba extends AppCompatActivity {
 
     EditText etNumber;
     Button btnSend;
-    TextView tvsquaredNumber, tvcubeNumber, tvnegativeNumber, tvResultSecondTask;
+    TextView tvsquaredNumber, tvcubeNumber, tvnegativeNumber, tvResultSecondTask, tvThirdResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +27,7 @@ public class FourthLaba extends AppCompatActivity {
         tvcubeNumber = findViewById(R.id.tvcubeNumber);
         tvnegativeNumber = findViewById(R.id.tvnegativeNumber);
         tvResultSecondTask = findViewById(R.id.tvResultSecondTask);
+        tvThirdResult = findViewById(R.id.tvThirdResult);
         btnSend.setOnClickListener(view -> {
             writeResult();
         });
@@ -37,6 +38,17 @@ public class FourthLaba extends AppCompatActivity {
             values.add(id);
         }
         tvResultSecondTask.setText(String.valueOf(sum(values, func)));
+
+        Function<String, String> trim = String::trim;
+        String str = trim
+                .andThen(String::toLowerCase)
+                .andThen(StringBuilder::new)
+                .andThen(StringBuilder::reverse)
+                .andThen(StringBuilder::toString)
+                .apply(" ABCDEFG ");
+
+        tvThirdResult.setText(str);
+
     }
 
     private static ArrayList<Integer> sum(ArrayList<Integer> numbers, Expression func) {
@@ -81,6 +93,4 @@ public class FourthLaba extends AppCompatActivity {
     public int negativeNumber(NameAndIndexPredicate3 p, int index) {
         return p.negativeNumber(index) * -1;
     }
-
-
 }
