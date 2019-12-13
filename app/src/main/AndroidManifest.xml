@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".thirdLab.Fifth2Activity">
+        </activity>
+        <activity android:name=".thirdLab.FifthActivity">
+        </activity>
         <activity android:name=".fourthLaba.FourthLaba">
         </activity>
         <activity android:name=".secondLab.SecondLabSecondTask">
