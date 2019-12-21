@@ -8,6 +8,7 @@
     tools:context=".thirdLab.FifthActivity">
 
     <TextView
+        android:id="@+id/tvFirstEt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -20,13 +21,14 @@
         android:id="@+id/edPeople"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf= "@+id/tvFirstEt"/>
 
     <TextView
+        android:id="@+id/tvSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -43,16 +45,18 @@
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edPeople"/>
+        app:layout_constraintTop_toBottomOf="@id/tvSecond"/>
 
     <Button
         android:id="@+id/btnfifth"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:text="Посчитать (Результат в логах)"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/edTaxi"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        />
 
 </android.support.constraint.ConstraintLayout>
