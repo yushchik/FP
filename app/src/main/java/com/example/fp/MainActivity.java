@@ -9,12 +9,12 @@ import android.widget.TextView;
 import com.example.fp.firstLab.FirstLab;
 import com.example.fp.fourthLaba.FourthLaba;
 import com.example.fp.secondLab.SecondLab;
-import com.example.fp.thirdLab.Fifth2Activity;
-import com.example.fp.thirdLab.FifthActivity;
+import com.example.fp.fifthLab.Fifth2Activity;
+import com.example.fp.thirdLab.ThirdActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btn, btnSecondLab, btnFourthLab, btnFifthLab;
+    Button btn, btnSecondLab, btnFourthLab, btnFifthLab, btnThirdLab;
     TextView text;
 
     @Override
@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
         btnSecondLab = findViewById(R.id.btnSecondLab);
         btnFourthLab = findViewById(R.id.btnFourthLab);
         btnFifthLab = findViewById(R.id.btnFifthLab);
-        //  text = findViewById(R.id.tvMain);
+        btnThirdLab = findViewById(R.id.btnThirdLab);
+
         btn.setOnClickListener(view ->
         {
             Intent intent = new Intent(this, FirstLab.class);
@@ -35,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
         btnSecondLab.setOnClickListener(view ->
         {
             Intent intent = new Intent(this, SecondLab.class);
+            startActivity(intent);
+        });
+
+        btnThirdLab.setOnClickListener(view ->
+        {
+            Intent intent = new Intent(this, ThirdActivity.class);
             startActivity(intent);
         });
 
@@ -49,6 +56,5 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(this, Fifth2Activity.class);
             startActivity(intent);
         });
-
     }
 }
